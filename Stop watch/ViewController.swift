@@ -67,6 +67,9 @@ class ViewController: UIViewController {
         flag = true
         
         timeLabel.text = "5:00"
+        
+        patioPic.transform = CGAffineTransformMakeScale(CGFloat(1), CGFloat(1))
+        
     }
     @IBOutlet var timeLabel: UILabel!
     override func viewDidLoad() {
