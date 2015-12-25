@@ -1,25 +1,126 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stop_watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psa-4T-GzK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7j4-1r-UdA"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="LT Timer" id="ElP-wf-H5W">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="yT1-nP-xlH">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="HqJ-Kp-D9i"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTX-gA-JRG">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="H8p-9P-DEt"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="fDd-N7-jzX">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="to4-Xc-2og"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AcA-eC-W0V"/>
+                                    <barButtonItem systemItem="pause" id="yn2-0u-sdt">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="WKv-O5-8nG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEE-Xb-ltM">
+                                <rect key="frame" x="20" y="201" width="335" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="Fj8-PY-7d5"/>
+                                    <constraint firstAttribute="height" constant="96" id="pDL-n1-aK3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="patio.png" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-Pq-JPm">
+                                <rect key="frame" x="61" y="342" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="8gl-vW-ejS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="hOb-Kd-J7E"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="sKh-Fw-2KZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="uX9-P8-aOS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LTの時間計測タイマ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kb-5u-OBO">
+                                <rect key="frame" x="91" y="97" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="時間が経つにつれてぱちお先輩が小さくなる" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mP-mi-bsz">
+                                <rect key="frame" x="17" y="158" width="340" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4mP-mi-bsz" firstAttribute="top" secondItem="9kb-5u-OBO" secondAttribute="bottom" constant="40" id="1WW-A7-kgj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cTX-gA-JRG" secondAttribute="trailing" constant="-20" id="2Bu-Wb-brF"/>
+                            <constraint firstItem="PZp-Pq-JPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2XW-Cy-HSD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PZp-Pq-JPm" secondAttribute="trailing" constant="43" id="2mb-7H-TAs"/>
+                            <constraint firstItem="psa-4T-GzK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2zj-dK-Rgg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cTX-gA-JRG" secondAttribute="bottom" id="5BX-PL-2af"/>
+                            <constraint firstItem="PZp-Pq-JPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A2C-rt-35t"/>
+                            <constraint firstItem="PZp-Pq-JPm" firstAttribute="top" secondItem="wEE-Xb-ltM" secondAttribute="bottom" constant="45" id="FkD-Ka-PF3"/>
+                            <constraint firstItem="wEE-Xb-ltM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HHQ-ti-9Ph"/>
+                            <constraint firstItem="wEE-Xb-ltM" firstAttribute="top" secondItem="psa-4T-GzK" secondAttribute="bottom" constant="137" id="IQM-gm-bRW"/>
+                            <constraint firstItem="9kb-5u-OBO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OFi-Ea-dxh"/>
+                            <constraint firstItem="9kb-5u-OBO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="QKj-Yz-3BS"/>
+                            <constraint firstItem="cTX-gA-JRG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Y4Q-ZE-U5r"/>
+                            <constraint firstItem="9kb-5u-OBO" firstAttribute="top" secondItem="psa-4T-GzK" secondAttribute="bottom" constant="33" id="Ysw-cc-Cbd"/>
+                            <constraint firstItem="psa-4T-GzK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="axV-QS-ihZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mP-mi-bsz" secondAttribute="trailing" constant="-2" id="cBS-Y9-MZe"/>
+                            <constraint firstItem="cTX-gA-JRG" firstAttribute="top" secondItem="PZp-Pq-JPm" secondAttribute="bottom" constant="31" id="hgE-UK-T8s"/>
+                            <constraint firstItem="4mP-mi-bsz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="mRC-NB-3OQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9kb-5u-OBO" secondAttribute="trailing" constant="72" id="mS2-SU-0Vj"/>
+                            <constraint firstItem="4mP-mi-bsz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTN-I6-I4l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="psa-4T-GzK" secondAttribute="trailing" constant="-20" id="vzg-vX-ElS"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="patioPic" destination="PZp-Pq-JPm" id="IIo-kc-nVT"/>
+                        <outlet property="timeLabel" destination="wEE-Xb-ltM" id="7bi-sB-MbT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="387.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="patio.png" width="512" height="512"/>
+    </resources>
 </document>

@@ -12,6 +12,8 @@
 		65EE8D161C2D10830075D23B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE8D141C2D10830075D23B /* Main.storyboard */; };
 		65EE8D181C2D10830075D23B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EE8D171C2D10830075D23B /* Assets.xcassets */; };
 		65EE8D1B1C2D10830075D23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE8D191C2D10830075D23B /* LaunchScreen.storyboard */; };
+		65EE8D231C2D17A40075D23B /* patio.png in Resources */ = {isa = PBXBuildFile; fileRef = 65EE8D221C2D17A40075D23B /* patio.png */; };
+		65EE8D251C2D1EAF0075D23B /* patio2.png in Resources */ = {isa = PBXBuildFile; fileRef = 65EE8D241C2D1EAF0075D23B /* patio2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		65EE8D171C2D10830075D23B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65EE8D1A1C2D10830075D23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65EE8D1C1C2D10830075D23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65EE8D221C2D17A40075D23B /* patio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patio.png; path = ../../../../../Desktop/patio.png; sourceTree = "<group>"; };
+		65EE8D241C2D1EAF0075D23B /* patio2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patio2.png; path = ../../../../../Desktop/patio2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				65EE8D171C2D10830075D23B /* Assets.xcassets */,
 				65EE8D191C2D10830075D23B /* LaunchScreen.storyboard */,
 				65EE8D1C1C2D10830075D23B /* Info.plist */,
+				65EE8D221C2D17A40075D23B /* patio.png */,
+				65EE8D241C2D1EAF0075D23B /* patio2.png */,
 			);
 			path = "Stop watch";
 			sourceTree = "<group>";
@@ -123,7 +129,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EE8D251C2D1EAF0075D23B /* patio2.png in Resources */,
 				65EE8D1B1C2D10830075D23B /* LaunchScreen.storyboard in Resources */,
+				65EE8D231C2D17A40075D23B /* patio.png in Resources */,
 				65EE8D181C2D10830075D23B /* Assets.xcassets in Resources */,
 				65EE8D161C2D10830075D23B /* Main.storyboard in Resources */,
 			);
